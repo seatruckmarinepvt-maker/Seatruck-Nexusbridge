@@ -4,9 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/Seatruck-Nexusbridge/",
+  base: "/",
 
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
 
   resolve: {
     alias: {
