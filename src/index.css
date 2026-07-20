@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-forest: #18324A;     /* Midnight Navy */
+  --color-brand-emerald: #C8A14A;    /* Desert Gold (Primary) */
+  --color-brand-navy: #112335;       /* Deep Navy */
+  --color-brand-olive: #8B6A43;      /* Desert Brown / Accent */
+  --color-brand-gold: #D4AF37;       /* Metallic Gold */
+  --color-brand-charcoal: #2B2B2B;   /* Deep Charcoal Headings */
+  --color-brand-cream: #FFFDF8;      /* Soft Ivory Cards */
+  --color-brand-warm-white: #F8F5EF; /* Warm Ivory Background */
+  --color-brand-gray-light: #E8D9B5; /* Sand Beige Borders */
+}
+
+/* Custom scrollbar optimized for elegant light theme layout */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8A14A;
+  border-radius: 9999px;
+  border: 1px solid #F8F5EF;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F8F5EF;
+  }
+}
+
+@layer utilities {
+  .clip-path-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  .bg-logo-gradient {
+    background: linear-gradient(135deg, #18324A 0%, #C8A14A 100%);
+  }
+  .bg-logo-gradient-hover {
+    background: linear-gradient(135deg, #112335 0%, #B8860B 100%);
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #C89B3C 100%);
+  }
+  .bg-gold-gradient-hover {
+    background: linear-gradient(135deg, #B8860B 0%, #A07815 100%);
+  }
+  .text-logo-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #C8A14A 50%, #18324A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-luxury-gradient {
+    background: linear-gradient(135deg, #18324A 0%, #112335 100%);
+  }
+  .glass-card {
+    background: rgba(255, 253, 248, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(232, 217, 181, 0.4);
+  }
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(255, 253, 248, 0.95);
+    border-color: rgba(200, 161, 74, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(200, 161, 74, 0.15);
+  }
+  .animate-slow-pulse {
+    animation: slowPulse 12s infinite alternate;
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes slowPulse {
+  0% { opacity: 0.2; transform: scale(1) translate(0, 0); }
+  50% { opacity: 0.4; transform: scale(1.1) translate(10px, -20px); }
+  100% { opacity: 0.2; transform: scale(1) translate(0, 0); }
+}
+
