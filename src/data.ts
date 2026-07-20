@@ -5,16 +5,22 @@
 
 import { Product, ShippingPort, ShippingRoute, Shipment, Language } from './types';
 
-// Import newly updated image assets
-const cashewImg = '/assets/images/Cashew.jpg';
-const pistachioImg = '/assets/images/Pistachio.jpg';
-const broccoliImg = '/assets/images/Broccli.jpg';
-const tomatoImg = '/assets/images/tomato.jpg';
-const onionImg = '/assets/images/seatruck_agro_harvest.jpg';
-const drumstickImg = '/assets/images/seatruck_agro_harvest.jpg';
+// Helper to resolve asset paths with correct BASE_URL for GitHub Pages support
+const resolveAsset = (path: string) => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
 
-export const HERO_BANNER_IMG = '/assets/images/seatruck_fruit_hero_banner_1784107067767.jpg';
-export const AGRO_HARVEST_IMG = '/assets/images/seatruck_agro_harvest.jpg';
+// Import newly updated image assets
+const cashewImg = resolveAsset('/assets/images/Cashew.jpg');
+const pistachioImg = resolveAsset('/assets/images/Pistachio.jpg');
+const broccoliImg = resolveAsset('/assets/images/Broccli.jpg');
+const tomatoImg = resolveAsset('/assets/images/tomato.jpg');
+const onionImg = resolveAsset('/assets/images/seatruck_agro_harvest.jpg');
+const drumstickImg = resolveAsset('/assets/images/seatruck_agro_harvest.jpg');
+
+export const HERO_BANNER_IMG = resolveAsset('/assets/images/seatruck_fruit_hero_banner_1784107067767.jpg');
+export const AGRO_HARVEST_IMG = resolveAsset('/assets/images/seatruck_agro_harvest.jpg');
 
 export const TRANSLATIONS: Record<Language, Record<string, string>> = {
   en: {
@@ -455,7 +461,7 @@ export const PRODUCTS: Product[] = [
     category: 'dry_fruits',
     name: { en: 'Almonds', es: 'Almendras', ar: 'لوز', hi: 'बादाम', zh: '杏仁（扁桃仁）' },
     description: { en: 'Sweet, uniform unshelled California almonds, supreme grade.', es: 'Almendras dulces sin cáscara de calibre calibrado e impecables.', ar: 'لوز حلو مقشر متناسق الحجم بجريات عالية الدسامة.', hi: 'कैलिफोर्निया बादाम, समान आकार और श्रेष्ठ गुणवत्तायुक्त सुखाया हुआ।', zh: '加州优等脱壳原颗扁桃仁，无干缩，色泽红亮。' },
-    image: '/assets/images/Almond.jpg',
+    image: resolveAsset('/assets/images/Almond.jpg'),
     details: {
       en: { origin: 'USA / India Processing', packaging: '25lb Kraft Boxes', moq: '20 MT', grade: 'Nonpareil Supreme 22/24', loadingCapacity: '20 MT per 20ft' },
       es: { origin: 'EE. UU. / India', packaging: 'Cajas de carton 25lb', moq: '20 MT', grade: 'Nonpareil 22/24 Supreme', loadingCapacity: '20 MT por 20 pies' },
@@ -497,7 +503,7 @@ export const PRODUCTS: Product[] = [
     category: 'fresh_produce',
     name: { en: 'Apples', es: 'Manzanas', ar: 'تفاح', hi: 'सेब', zh: '苹果' },
     description: { en: 'Fresh, sweet, and crisp premium red apples, direct from orchards.', es: 'Manzanas rojas frescas, dulces y crujientes, directamente de los huertos.', ar: 'تفاح أحمر طازج وحلو ومقرمش من البساتين مباشرة.', hi: 'ताजा, मीठा और कुरकुरा प्रीमियम लाल सेब, सीधे बगीचों से।', zh: '新鲜、鲜甜、爽脆的优质红苹果，果园直供。' },
-    image: '/assets/images/apple.jpg',
+    image: resolveAsset('/assets/images/apple.jpg'),
     details: {
       en: { origin: 'Himachal, India', packaging: '18kg Cartons', moq: '15 MT', grade: 'Royal Delicious Class I', loadingCapacity: '20 MT per 40ft Reefer' },
       es: { origin: 'Himachal, India', packaging: 'Cartones de 18kg', moq: '15 MT', grade: 'Royal Delicious Clase I', loadingCapacity: '20 MT por Reefer de 40 pies' },
@@ -539,7 +545,7 @@ export const PRODUCTS: Product[] = [
     category: 'fresh_produce',
     name: { en: 'Sweet Corn', es: 'Maíz Dulce', ar: 'ذرة حلوة', hi: 'स्वीट कॉर्न', zh: '甜玉米' },
     description: { en: 'Plump and juicy sweet corn ears, sun-ripened and naturally sweet.', es: 'Mazorcas de maíz dulce carnosas y jugosas, maduradas al sol.', ar: 'أكواز الذرة الحلوة الممتلئة والعصارية，نضجت تحت أشعة الشمس وحلوة طبيعيًا.', hi: 'भरे हुए और रसीले स्वीट कॉर्न भुट्टे, धूप में पके और प्राकृतिक रूप से मीठे।', zh: '饱满多汁的黄甜玉米，光照充足，自然清甜。' },
-    image: '/assets/images/Corn.jpg',
+    image: resolveAsset('/assets/images/Corn.jpg'),
     details: {
       en: { origin: 'Punjab, India', packaging: '15kg Mesh Bags / Crates', moq: '15 MT', grade: 'Super Sweet Grade A', loadingCapacity: '16 MT per 40ft Reefer' },
       es: { origin: 'Punjab, India', packaging: 'Sacos de malla o cajas de 15kg', moq: '15 MT', grade: 'Súper Dulce Grado A', loadingCapacity: '16 MT por Reefer de 40 pies' },
@@ -560,7 +566,7 @@ export const PRODUCTS: Product[] = [
     category: 'fresh_produce',
     name: { en: 'Oranges', es: 'Naranjas', ar: 'برتقال', hi: 'संतरा', zh: '橙子' },
     description: { en: 'Juicy, sweet Valencia oranges with thin skins and rich vitamin C.', es: 'Naranjas de Valencia jugosas y dulces, con piel fina y ricas en vitamina C.', ar: 'برتقال فالنسيا العصاري والحلو ذو قشرة رقيقة ومصدر غني بفيتامين سي.', hi: 'पतले छिलके और विटामिन सी से भरपूर, रसीले व मीठे वेलेंसिया संतरे।', zh: '多汁、甘甜的瓦伦西亚橙，皮薄肉厚，富含天然维生素C。' },
-    image: '/assets/images/Orange.jpg',
+    image: resolveAsset('/assets/images/Orange.jpg'),
     details: {
       en: { origin: 'Nagpur, India', packaging: '15kg Telescopic Cartons', moq: '20 MT', grade: 'Valencia Grade I', loadingCapacity: '22 MT per 40ft Reefer' },
       es: { origin: 'Nagpur, India', packaging: 'Cajas telescópicas de 15kg', moq: '20 MT', grade: 'Valencia Grado I', loadingCapacity: '22 MT por Reefer de 40 pies' },
@@ -581,7 +587,7 @@ export const PRODUCTS: Product[] = [
     category: 'fresh_produce',
     name: { en: 'Potatoes', es: 'Patatas', ar: 'بطاطस', hi: 'आलू', zh: '土豆' },
     description: { en: 'Premium quality yellow potatoes, smooth-skinned and perfect for versatile culinary use.', es: 'Patatas amarillas de calidad premium, con piel suave e ideales para múltiples usos culinarios.', ar: 'بطاطس صفراء عالية الجودة，ملساء القشرة ومثالية للاستخدامات الطهي المتنوعة.', hi: 'प्रीमियम गुणवत्ता वाले पीले आलू, चिकनी त्वचा वाले और बहुमुखी पाक उपयोग के लिए उत्तम।', zh: '高品质黄金黄皮土豆，表皮光滑，芽眼浅，适合各种烹饪。' },
-    image: '/assets/images/Potato.jpg',
+    image: resolveAsset('/assets/images/Potato.jpg'),
     details: {
       en: { origin: 'Gujarat, India', packaging: '50kg Mesh Bags', moq: '25 MT', grade: 'Grade A Multi-purpose', loadingCapacity: '26 MT per 40ft Reefer' },
       es: { origin: 'Gujarat, India', packaging: 'Sacos de malla de 50kg', moq: '25 MT', grade: 'Multiuso Grado A', loadingCapacity: '26 MT por Reefer de 40 pies' },
@@ -602,7 +608,7 @@ export const PRODUCTS: Product[] = [
     category: 'grains',
     name: { en: 'Wheat', es: 'Trigo', ar: 'Trigo', hi: 'गेहूं', zh: '小麦' },
     description: { en: 'Golden premium Sharbati wheat, high in gluten and excellent for flour milling.', es: 'Trigo dorado premium Sharbati, de alto contenido en gluten y excelente molienda.', ar: 'قمح شارباتي الذهبي الممتاز，ذو محتوى بروتين عالي وممتاز للمطاحน وصنع الخبز.', hi: 'सुनहरा प्रीमियम शरबती गेहूं, उच्च ग्लूटेन और आटा मिलिंग के लिए उत्कृष्ट।', zh: '金黄色的优质莎尔巴蒂（Sharbati）小麦，高筋质，极其适合磨粉制面。' },
-    image: '/assets/images/Wheat.jpg',
+    image: resolveAsset('/assets/images/Wheat.jpg'),
     details: {
       en: { origin: 'Madhya Pradesh, India', packaging: '50kg Jute Bags', moq: '25 MT', grade: 'Premium Sharbati Grade I', loadingCapacity: '25 MT per 20ft' },
       es: { origin: 'Madhya Pradesh, India', packaging: 'Sacos de yute de 50kg', moq: '25 MT', grade: 'Premium Sharbati Grado I', loadingCapacity: '25 MT por 20 pies' },
