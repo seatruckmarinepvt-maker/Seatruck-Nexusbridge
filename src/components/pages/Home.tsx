@@ -290,18 +290,17 @@ export default function Home({ lang, onNavigate }: HomeProps) {
       
       {/* ================= HERO SECTION (LARGE SPLIT HERO) ================= */}
       <section className="relative min-h-[92vh] flex items-center pt-32 pb-20 text-brand-forest overflow-hidden bg-brand-warm-white">
-        {/* Background Image filling the entire section with golden sand overlay */}
+        {/* Background Image filling the entire section with full color vibrancy */}
         <div className="absolute inset-0 z-0">
           <img 
             src={homeBackgroundImg} 
             alt="Seatruck Sourcing and Logistics Background" 
-            className="w-full h-full object-cover opacity-55 mix-blend-multiply"
+            className="w-full h-full object-cover opacity-95 sm:opacity-100"
             style={{ paddingBottom: '0px' }}
             referrerPolicy="no-referrer"
           />
-          {/* Dubai premium golden sand overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-brand-warm-white/80 via-brand-warm-white/20 to-transparent pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-warm-white/90 pointer-events-none"></div>
+          {/* Lower-side gradient overlay to ensure text legibility while preserving vibrant upper image colors */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-warm-white/30 via-60% to-brand-warm-white/95 pointer-events-none"></div>
         </div>
 
         <div 
