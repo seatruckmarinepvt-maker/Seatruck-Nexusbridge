@@ -369,8 +369,8 @@ export default function Products({ lang, selectedProductId, initialSearch = '', 
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Dark 65% overlay for high text legibility and rich atmosphere */}
-        <div className="absolute inset-0 bg-[#071F18]/65 z-0" />
+        {/* Soft overlay for high text legibility and rich image visibility */}
+        <div className="absolute inset-0 bg-[#071F18]/45 z-0" />
         <div className="absolute inset-0 bg-noise opacity-5 pointer-events-none z-0"></div>
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 space-y-4">
