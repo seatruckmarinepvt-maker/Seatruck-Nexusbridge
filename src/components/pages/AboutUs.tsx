@@ -29,6 +29,7 @@ import {
   Factory
 } from 'lucide-react';
 import { Language } from '../../types';
+import pexelsEnginakyurtImage from '../../assets/images/pexels-enginakyurt-13409734.jpg';
 
 interface AboutUsProps {
   lang: Language;
@@ -620,13 +621,13 @@ export default function AboutUs({ lang, onNavigate }: AboutUsProps) {
           </svg>
         </div>
 
-        {/* Faded Cargo Vessel Image on the right */}
-        <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full z-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-r lg:from-brand-forest lg:via-brand-forest/85 lg:to-transparent from-brand-forest/95 via-brand-forest/80 to-brand-forest/95 z-10"></div>
+        {/* Cargo Vessel Image on the right */}
+        <div className="absolute top-0 right-0 w-full lg:w-3/5 h-full z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-r lg:from-brand-forest via-brand-forest/65 to-brand-forest/20 from-brand-forest/90 via-brand-forest/55 to-brand-forest/20 z-10"></div>
           <img 
-            src="/assets/images/seatruck_hero_banner.jpg" 
+            src={pexelsEnginakyurtImage} 
             alt="Cargo vessel" 
-            className="w-full h-full object-cover opacity-20 lg:opacity-30 mix-blend-luminosity"
+            className="w-full h-full object-cover opacity-60 lg:opacity-75"
             referrerPolicy="no-referrer"
           />
         </div>
