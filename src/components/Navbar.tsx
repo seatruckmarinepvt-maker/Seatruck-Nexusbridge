@@ -71,11 +71,11 @@ export default function Navbar({ currentLang, onLanguageChange, activeSection, o
             onClick={() => handleLinkClick('home')}
             id="nav-logo"
           >
-            <div className="w-12 h-12 flex items-center justify-center shadow-sm group-hover:scale-[1.03] transition-transform duration-300 overflow-hidden rounded-xl bg-white">
+            <div className="h-11 sm:h-12 aspect-[3/2] flex items-center justify-center shadow-sm group-hover:scale-[1.03] transition-transform duration-300 overflow-hidden rounded-xl bg-white p-0.5">
               <img 
                 src={companyLogo} 
                 alt="SES Logo" 
-                className="w-full h-full object-cover" 
+                className="w-full h-full object-contain rounded-lg" 
                 referrerPolicy="no-referrer"
               />
             </div>
