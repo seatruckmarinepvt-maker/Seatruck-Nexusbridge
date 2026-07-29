@@ -20,7 +20,7 @@ import ContactAndQuote from './components/pages/ContactAndQuote';
 import LegalAndMisc from './components/pages/LegalAndMisc';
 
 import { Ship, ArrowUp, CheckCircle, Globe, Anchor, Linkedin, Twitter, Facebook, Send, Check } from 'lucide-react';
-import companyLogo from './assets/images/regenerated_image_1784368104798.png';
+import companyLogo from './assets/images/regenerated_image_1784368012539.png';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('en');
@@ -279,11 +279,11 @@ export default function App() {
             {/* Brand details and Offices */}
             <div className="lg:col-span-5 space-y-6 text-start">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 flex items-center justify-center overflow-hidden shadow-md rounded-xl bg-white/10 p-0.5">
+                <div className="h-11 sm:h-12 aspect-[3/2] flex items-center justify-center overflow-hidden shadow-md rounded-xl bg-white/10 p-0.5">
                   <img 
                     src={companyLogo} 
                     alt="SES Logo" 
-                    className="w-full h-full object-cover rounded-lg" 
+                    className="w-full h-full object-contain rounded-lg" 
                     referrerPolicy="no-referrer"
                   />
                 </div>
