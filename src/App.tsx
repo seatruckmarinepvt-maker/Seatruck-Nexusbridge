@@ -279,7 +279,7 @@ export default function App() {
             {/* Brand details and Offices */}
             <div className="lg:col-span-5 space-y-6 text-start">
               <div className="flex items-center gap-3">
-                <div className="h-11 sm:h-12 aspect-[3/2] flex items-center justify-center overflow-hidden shadow-md rounded-xl bg-white/10 p-0.5">
+                <div className="h-11 sm:h-12 aspect-[3/2] flex items-center justify-center overflow-hidden shadow-md rounded-xl bg-white p-0.5">
                   <img 
                     src={companyLogo} 
                     alt="SES Logo" 
