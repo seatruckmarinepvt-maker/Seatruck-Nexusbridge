@@ -294,8 +294,8 @@ export default function ServicesAndIndustries({ lang, onNavigate }: ServicesAndI
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* Dark overlay for maximum text legibility and aesthetic contrast */}
-        <div className="absolute inset-0 bg-[#071F18]/70 z-0" />
+        {/* Soft overlay for text legibility and rich image visibility */}
+        <div className="absolute inset-0 bg-[#071F18]/45 z-0" />
         <div className="absolute inset-0 bg-noise opacity-5 pointer-events-none z-0"></div>
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 space-y-4">
